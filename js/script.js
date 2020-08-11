@@ -44,45 +44,44 @@ for(let link of links){
 /* Generating a list of titles */
 
 const optArticleSelector = '.post',
-optTitleSelector = '.post-title',
-optTitleListSelector = '.titles',
-optArticleTagsSelector = '.post-tags .list';
+  optTitleSelector = '.post-title',
+  optTitleListSelector = '.titles',
+  optArticleTagsSelector = '.post-tags .list';
 
 function generateTitleLinks(){
 
-/* [DONE] remove contents of titleList */
-//console.log(customSelector);
-const titleList = document.querySelector(optTitleListSelector);
-titleList.innerHTML = '';
-console.log(titleList);
+  /* [DONE] remove contents of titleList */
+  const titleList = document.querySelector(optTitleListSelector);
+  titleList.innerHTML = '';
+  console.log(titleList);
 
-/* [DONE] for each article */
-const articles = document.querySelectorAll(optArticleSelector);
-console.log(optArticleSelector);
-let html = '';
-for(let article of articles) {
-/* [DONE] get the article id */
-  const articleId = article.getAttribute('id');
-  console.log(articleId);
-/* [DONE] find the title element */
-  const articleTitle = article.querySelector(optTitleSelector).innerHTML;
-  console.log(articleTitle);
-/* get the title from the title element */
-/* [DONE] create HTML of the link */
-  const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
-  console.log(linkHTML);
-/* [DONE] insert link into titleList */
-  titleList.insertAdjacentHTML('beforeend', linkHTML);
+  /* [DONE] for each article */
+  const articles = document.querySelectorAll(optArticleSelector);
+  console.log(optArticleSelector);
+  let html = '';
+  for(let article of articles) {
+    /* [DONE] get the article id */
+    const articleId = article.getAttribute('id');
+    console.log(articleId);
+    /* [DONE] find the title element */
+    const articleTitle = article.querySelector(optTitleSelector).innerHTML;
+    console.log(articleTitle);
+    /* get the title from the title element */
+    /* [DONE] create HTML of the link */
+    const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
+    console.log(linkHTML);
+    /* [DONE] insert link into titleList */
+    titleList.insertAdjacentHTML('beforeend', linkHTML);
   }
-console.log(html);
+  console.log(html);
 
-const links = document.querySelectorAll('.titles a');
-console.log(links);
-for(let link of links){
-  link.addEventListener('click', titleClickHandler);
+  const links = document.querySelectorAll('.titles a');
+  console.log(links);
+  for(let link of links){
+    link.addEventListener('click', titleClickHandler);
   }
 
-};
+}
 generateTitleLinks();
 
 /* adding tags to the article */
@@ -94,25 +93,25 @@ function generateTags(){
   /* START LOOP: for every article: */
     const tagsWrapper = article.querySelector(optArticleTagsSelector);
     console.log(tagsWrapper);
-  /* find tags wrapper */
+    /* find tags wrapper */
 
-  /* make html variable with empty string */
+    /* make html variable with empty string */
 
-  /* get tags from data-tags attribute */
+    /* get tags from data-tags attribute */
 
-  /* split tags into array */
+    /* split tags into array */
 
-  /* START LOOP: for each tag */
+    /* START LOOP: for each tag */
 
-  /* generate HTML of the link */
+    /* generate HTML of the link */
 
-  /* add generated code to html variable */
+    /* add generated code to html variable */
 
-  /* END LOOP: for each tag */
+    /* END LOOP: for each tag */
 
-  /* insert HTML of all the links into the tags wrapper */
+    /* insert HTML of all the links into the tags wrapper */
 
-  /* END LOOP: for every article: */
+    /* END LOOP: for every article: */
   }
 }
 
