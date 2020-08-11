@@ -26,6 +26,7 @@
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
     "browser-sync": "^2.26.9",
+    "eslint": "^7.6.0",
     "html-validate": "^3.0.0",
     "mkdirp": "^1.0.4",
     "node-sass": "^4.14.1",
