@@ -98,9 +98,9 @@ function generateTags(){
     const articleTagsArray = articleTags.split(' ');
     console.log(articleTagsArray);
     /* [DONE] START LOOP: for each tag */
-    for (let articleTags of articleTagsArray) {
+    for (let tag of articleTagsArray) {
     /* generate HTML of the link */
-      const linkHTML = '<li><a href="#' + articleTags + '"><span>';
+      const linkHTML = '<li><a href="#' + tag + '"><span>';
       console.log(linkHTML);
       /* add generated code to html variable */
       html = html + linkHTML;
@@ -112,12 +112,12 @@ function generateTags(){
   }
   console.log(html);
 
-  const tags = document.querySelectorAll('.titles a');
-  for(let tag of tags){
+  const tagList = document.querySelectorAll('.tags');
+  for(let tag of tagList){
     tag.addEventListener('click', titleClickHandler);
   }
+  
 }
 
-const tagList = document.querySelector(optArticleTagsSelector);
 
 generateTags();
