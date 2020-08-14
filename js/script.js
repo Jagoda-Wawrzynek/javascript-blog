@@ -80,7 +80,6 @@ console.log(firstLink.children[0]);
 firstLink.children[0].classList.add('active');
 
 /* adding tags to the article */
-
 function generateTags(){
 /* [DONE] find all articles */
   const articles = document.querySelectorAll(optArticleSelector);
@@ -104,14 +103,21 @@ function generateTags(){
       const linkHTML = '<li><a href="#' + articleTags + '"><span>';
       console.log(linkHTML);
       /* add generated code to html variable */
-    
+      html = html + linkHTML;
       /* END LOOP: for each tag */
-
-      /* [DONE] insert HTML of all the links into the tags wrapper */
-      tagsWrapper.insertAdjacentHTML('beforeend', html);
-      /* END LOOP: for every article: */
     }
+    /* [DONE] insert HTML of all the links into the tags wrapper */
+    tagsWrapper.insertAdjacentHTML('beforeend', html);
+    /* END LOOP: for every article: */
+  }
+  console.log(html);
+
+  const tags = document.querySelectorAll('.titles a');
+  for(let tag of tags){
+    tag.addEventListener('click', titleClickHandler);
   }
 }
+
+const tagList = document.querySelector(optArticleTagsSelector);
 
 generateTags();
