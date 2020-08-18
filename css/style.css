@@ -81,6 +81,46 @@ body {
   display: inline-block;
 }
 
+aside {
+  color: #1eff00;
+}
+
+aside .tags li {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 30%;
+}
+
+aside .tags a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+aside .tag-size-1 {
+  font-size: 14px;
+  color: orange;
+}
+
+aside .tag-size-2 {
+  font-size: 16px;
+  color: green;
+}
+
+aside .tag-size-3 {
+  font-size: 18px;
+  color: palevioletred;
+}
+
+aside .tag-size-4 {
+  font-size: 20px;
+  color: blue;
+}
+
+aside .tag-size-5 {
+  font-size: 24px;
+  color: blue;
+}
+
 /* Authors */
 .authors li {
   margin-bottom: 12px;
