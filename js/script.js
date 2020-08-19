@@ -271,7 +271,6 @@ function generateAuthors(){
   console.log(allAuthors);
   /* [NEW] find list of authors in right column */
   const authorList = document.querySelector(optArticleAuthorList);
-  //console.log(authorList);
   //let allAuthorsHTML = '';
   const allAuthorData = {authors: []};
   /* [NEW] START LOOP: for each authorTags in allAuthors: */
@@ -280,9 +279,10 @@ function generateAuthors(){
       authorTags: authorTags,
       authorCount: allAuthors[authorTags]
     });
+    console.log(allAuthorData);
     /* [NEW] generate code of a link and add it to allAuthorsHTML */
-    //const authorLinkHTML = '<li><a "href="#author_' + authorTags + '">' + authorTags +  ' (' + allAuthors[authorTags] + ')</a></li>';
-    //console.log(authorLinkHTML);
+    const authorLinkHTML = '<li><a "href="#author_' + authorTags + '">' + authorTags +  ' (' + allAuthors[authorTags] + ')</a></li>';
+    console.log(authorLinkHTML);
     //allAuthorsHTML += '<li><a href="#author_' + authorTags + '">' + authorTags +  ' (' + allAuthors[authorTags] + ') </a></li>';
     //allAuthorsHTML += authorLinkHTML;
   } 
@@ -291,6 +291,7 @@ function generateAuthors(){
   //authorList.innerHTML = allAuthorsHTML;
   //const authorLists = document.querySelector(optArticleAuthorList);
   authorList.innerHTML = templates.authorListLink(allAuthorData);
+  console.log('authorList', authorList);
 }
 
 generateAuthors();
