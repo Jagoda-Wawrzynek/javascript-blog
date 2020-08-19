@@ -1,3 +1,4 @@
+'use strict';
 const templates = {
   articleOfLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML),
   tagOfLink: Handlebars.compile(document.querySelector('#template-tag-link').innerHTML),
@@ -6,7 +7,6 @@ const templates = {
   authorListLink: Handlebars.compile(document.querySelector('#template-authors-list-link').innerHTML)
 };
 
-'use strict';
 const optArticleSelector = '.post',
   optTitleSelector = '.post-title',
   optTitleListSelector = '.titles',
@@ -277,9 +277,9 @@ function generateAuthors(){
   const allAuthorHTML = {authors: []};
   /* [NEW] START LOOP: for each authorTags in allAuthors: */
   for (let authorTags in allAuthors){
-    allAuthorsHTML = allAuthorHTML.authors.push({
-      author: author,
-      authorCount: allAuthors[author]
+    allAuthorHTML.authors.push({
+      authorTags: authorTags,
+      authorCount: allAuthors[authorTags]
     });
     /* [NEW] generate code of a link and add it to allAuthorsHTML */
     //const authorLinkHTML = '<li><a "href="#author_' + authorTags + '">' + authorTags +  ' (' + allAuthors[authorTags] + ')</a></li>';
