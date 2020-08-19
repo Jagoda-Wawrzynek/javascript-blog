@@ -281,8 +281,8 @@ function generateAuthors(){
     });
     console.log(allAuthorData);
     /* [NEW] generate code of a link and add it to allAuthorsHTML */
-    const authorLinkHTML = '<li><a "href="#author_' + authorTags + '">' + authorTags +  ' (' + allAuthors[authorTags] + ')</a></li>';
-    console.log(authorLinkHTML);
+    //const authorLinkHTML = '<li><a "href="#author_' + authorTags + '">' + authorTags +  ' (' + allAuthors[authorTags] + ')</a></li>';
+    //console.log(authorLinkHTML);
     //allAuthorsHTML += '<li><a href="#author_' + authorTags + '">' + authorTags +  ' (' + allAuthors[authorTags] + ') </a></li>';
     //allAuthorsHTML += authorLinkHTML;
   } 
