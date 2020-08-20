@@ -20,8 +20,6 @@ const optArticleSelector = '.post',
 /* ......................................................................................... */
 /* View article */
 function titleClickHandler(event){
-  console.log('Link was clicked!');
-  console.log(event);
   event.preventDefault();
   const clickedElement = this;
 
@@ -41,7 +39,6 @@ function titleClickHandler(event){
   const articleSelector = clickedElement.getAttribute('href');
   /* [DONE] find the correct article using the selector (value of 'href' attribute) */
   const targetArticle = document.querySelector(articleSelector);
-  console.log(targetArticle);
   /* [DONE] add class 'active' to the correct article */
   targetArticle.classList.add('active');
 }
@@ -233,7 +230,6 @@ function generateAuthors(){
     /* [DONE] insert HTML of all the links into the tags wrapper */
     authorWrapper.insertAdjacentHTML('beforeend', html);
   }
-  console.log(allAuthors);
   /* [NEW] find list of authors in right column */
   const authorList = document.querySelector(optArticleAuthorList);
   const allAuthorData = {authors: []};
@@ -245,7 +241,6 @@ function generateAuthors(){
   } 
   /* [NEW] add html from allAuthorHTML to authorList */
   authorList.innerHTML = templates.authorListLink(allAuthorData);
-  console.log('authorList', authorList);
 }
 
 generateAuthors();
